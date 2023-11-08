@@ -1,0 +1,279 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.dashboard {
+  display: grid;
+  grid-template-areas: "header" "aside" "main" "footer";
+  grid-template-rows: 100px 100px 1fr 100px;
+  flex-wrap: wrap;
+}
+.dashboard header {
+  grid-area: header;
+}
+.dashboard header nav {
+  justify-content: space-between;
+  height: -moz-max-content;
+  height: max-content;
+}
+.dashboard header nav .slogan {
+  display: none;
+}
+.dashboard header nav .brand {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+.dashboard header nav figure {
+  width: 200px;
+  display: none;
+}
+.dashboard header nav figure img {
+  width: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+  margin-top: 0%;
+}
+.dashboard aside {
+  grid-area: aside;
+  background-color: #bcceab;
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: center;
+  align-items: center;
+  font-family: "Edu TAS Beginner", cursive;
+  font-size: 10px;
+  max-height: -moz-max-content;
+  max-height: max-content;
+}
+.dashboard aside .categoria {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 20px;
+}
+.dashboard aside .categoria .logocel img {
+  display: flex;
+  justify-content: center;
+  width: 50px;
+  height: auto;
+}
+.dashboard main {
+  grid-area: main;
+  background-color: #f2c9c0;
+  text-align: center;
+  align-items: center;
+  align-content: center;
+  padding-top: 20px;
+  padding-bottom: 10px;
+  display: flex;
+  flex-direction: column;
+}
+.dashboard main .card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: stretch;
+  font-family: "Edu TAS Beginner", cursive;
+  flex-direction: column;
+}
+.dashboard main .card-container .card-header {
+  min-height: 10px;
+  color: #5e5b54;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  margin-top: 0px;
+}
+.dashboard main .card-container .card-body {
+  min-height: 100px;
+  max-height: -moz-min-content;
+  max-height: min-content;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+.dashboard main .card-container .card-body img {
+  max-height: 250px;
+  width: 250px;
+}
+.dashboard footer {
+  grid-area: footer;
+  background-color: #bcceab;
+  height: 80%;
+  display: flex;
+  padding-bottom: 0%;
+  color: white;
+  justify-content: flex-end;
+  flex-direction: column;
+  align-items: center;
+}
+.dashboard footer .iconos {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+  background-color: #bcceab;
+  margin-top: 0%;
+  width: 100%;
+  gap: 10px;
+}
+.dashboard footer .texto_derechos {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+  background-color: #c2bdb2;
+  margin-top: 0%;
+  width: 100%;
+}
+
+@media (min-width: 576px) {
+  .dashboard {
+    grid-template-areas: "header header header header header" "aside main main main main" "aside main main main main" "footer footer footer footer footer";
+    grid-template-rows: 100px 100px 1fr 100px;
+    grid-template-columns: 280px;
+  }
+  .dashboard header {
+    grid-area: header;
+    background-color: #c2bdb2;
+    height: 100px;
+
+  }
+  .dashboard header nav {
+    display: flex;
+    height: 100vh;
+    flex-direction: column;
+    gap: 20px;
+    margin-bottom: 20px;
+  }
+  .dashboard header nav .brand figure {
+    display: flex;
+    justify-content: center;
+    width: 200px;
+    height: auto;
+  }
+  .dashboard header nav .brand .slogan {
+    display: flex;
+    align-items: end;
+    font-family: "Edu TAS Beginner", cursive;
+    font-size: smaller;
+  }
+  .dashboard aside {
+    grid-area: aside;
+    background-color: #bcceab;
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: flex-end;
+    align-items: center;
+    height: 100%;
+    font-family: "Edu TAS Beginner", cursive;
+    font-size: 25px;
+  }
+  .dashboard aside .categoria {
+    margin-top: 20px;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+  }
+  .dashboard aside .categoria .logocel {
+    display: none;
+  }
+  .dashboard aside .categoria p {
+    cursor: pointer;
+  }
+  .dashboard aside .categoria p:hover {
+    background-color: #f8d797;
+  }
+  .dashboard main {
+    grid-area: main;
+    background: #f8d797;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    flex-direction: column;
+    align-items: center;
+  }
+  .dashboard main .card-container {
+    display: flex;
+    flex-direction: row;
+    background-color: #f2c9c0;
+    margin-bottom: 10px;
+    max-width: 800px;
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+  .dashboard main .card-container .card-header {
+    min-height: 50px;
+    color: #5e5b54;
+    display: flex;
+    flex-grow: 1;
+    text-align: center;
+    justify-content: center;
+    text-align: center;
+  }
+  .dashboard main .card-container .card-header h2 {
+    font-family: "Edu TAS Beginner", cursive;
+    font-size: 40px;
+  }
+  .dashboard main .card-container .card-header h2:hover {
+    background-color: #5e5b54;
+    color: #f2c9c0;
+    cursor: pointer;
+  }
+  .dashboard main .card-container .card-body {
+    min-height: 120px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    transition: all 1s ease-in-out;
+    overflow: hidden;
+  }
+  .dashboard main .card-container .card-body:hover img {
+    transform: scale(1.1);
+    background-color: #bcceab;
+    transition: transform 1s ease-in-out;
+  }
+  .dashboard main .card-container .card-body img {
+    max-width: -moz-fit-content;
+    max-width: fit-content;
+    max-height: -moz-fit-content;
+    max-height: fit-content;
+    border-radius: 15px;
+    padding: 20px;
+    width: 300px;
+    height: 300px;
+  }
+  .dashboard footer {
+    grid-area: footer;
+    justify-content: center;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    flex-direction: column;
+    background-color: #5e5b54;
+  }
+  .dashboard footer .texto_derechos {
+    font-size: 20px;
+  }
+  .dashboard footer .contactanos {
+    display: flex;
+    flex-direction: column;
+  }
+  .dashboard footer .iconos {
+    display: flex;
+    flex-direction: row;
+    margin-top: 20px;
+    font-size: 50px;
+    cursor: pointer;
+  }
+  .dashboard footer .iconos:hover {
+    background-color: #f2c9c0;
+  }
+}/*# sourceMappingURL=style.css.map */
